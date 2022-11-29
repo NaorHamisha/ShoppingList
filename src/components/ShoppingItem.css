@@ -1,0 +1,35 @@
+.shopping-item {
+  background-color: #b4d39b;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.shopping-item-title {
+  font-family: fantasy;
+}
+
+.shopping-item-price {
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+}
+
+.shopping-item-image {
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.shopping-item-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.item {
+  background-color: #576097;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
+}

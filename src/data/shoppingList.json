@@ -1,0 +1,38 @@
+[
+    {
+       "id":1,
+       "productName":"Milk",
+       "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F04%2F27%2Fwhat-happens-to-your-body-if-you-drink-milk-every-day.jpg",
+       "price":30,
+       "storeName":"Half Free",
+       "descretpion":"this is my desc",
+       "anotherImage":"https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2010/11/thumb_720_450_Wonder-52-Cheddar-Cheese-Static-Image.jpg"
+    },
+    {
+       "id":2,
+       "productName":"Yellow cheese",
+       "image":"https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2010/11/thumb_720_450_Wonder-52-Cheddar-Cheese-Static-Image.jpg",
+       "price":20,
+       "storeName":"Rami Levi",
+       "descretpion":"Good Product",
+       "anotherImage":"https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2010/11/thumb_720_450_Wonder-52-Cheddar-Cheese-Static-Image.jpg"
+    },
+    {
+       "id":3,
+       "productName":"Formagge blanc",
+       "image":"https://img-3.journaldesfemmes.fr/NYk70TS6ssBmW4GjSwphDYSbjCY=/1500x/smart/1efad11d018c44c3a30f1e453afe5790/ccmcms-jdf/18732331.jpg",
+       "price":1430,
+       "storeName":"Half Free",
+       "descretpion":"this is my desc",
+       "anotherImage":"https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2010/11/thumb_720_450_Wonder-52-Cheddar-Cheese-Static-Image.jpg"
+    },
+    {
+       "id":4,
+       "productName":"Coconut",
+       "image":"https://www.narayanahealth.org/blog/wp-content/uploads/2022/03/shutterstock_622663796.jpg",
+       "price":150,
+       "storeName":"Half Free",
+       "descretpion":"this is my desc",
+       "anotherImage":"https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2010/11/thumb_720_450_Wonder-52-Cheddar-Cheese-Static-Image.jpg"
+    }
+ ]

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import ShoppingItem from './components/ShoppingItem'
+import ItemPage from './components/ItemPage'
+import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
+import shoppingList from './data/shoppingList.json'
+
+// const shoppingList = [
+//   { id: 1, productName: 'Milk', image: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F04%2F27%2Fwhat-happens-to-your-body-if-you-drink-milk-every-day.jpg', price: 30, storeName: 'Half Free' , descretpion:'this is my desc', anotherImage: 'data:image/png;base64,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' },
+//   { id: 12, productName: 'Yellow cheese', image: 'https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2010/11/thumb_720_450_Wonder-52-Cheddar-Cheese-Static-Image.jpg', price: 20 },
+//   { id: 13, productName: 'Formagge blanc', image: 'https://img-3.journaldesfemmes.fr/NYk70TS6ssBmW4GjSwphDYSbjCY=/1500x/smart/1efad11d018c44c3a30f1e453afe5790/ccmcms-jdf/18732331.jpg', price: 1430 },
+//   { id: 14, productName: 'Coconut', image: 'https://www.narayanahealth.org/blog/wp-content/uploads/2022/03/shutterstock_622663796.jpg', price: 150 },
+// ];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+          <Routes>
+            <Route exact path="/" element={
+              <div>
+                <h2>Shopping List</h2>
+                {
+                    shoppingList.map(item =>{
+                      return (
+                        <div>
+                            <ShoppingItem key={item.id} item={item}/>
+                        </div>  
+                      )
+                    })}
+              </div>
+            }>
+            </Route>
+            <Route exact path="/item/:id" element={<ItemPage />}></Route>
+          </Routes>
+    </Router>
   );
 }
 
