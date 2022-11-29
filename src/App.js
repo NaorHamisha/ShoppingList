@@ -17,16 +17,17 @@ function App() {
           <Routes>
             <Route exact path="/" element={
               <div>
-                <h2>Shopping List</h2>
+                <div className='title'>
+                    <h2>Shopping List</h2>
+                </div>
                 {
                     shoppingList.map(item =>{
                       return (
-                        <div>
-                            <ShoppingItem key={item.id} item={item}/>
-                        </div>  
+                           <ShoppingItem key={item.id} item={item}/>
                       )
                     })}
               </div>
+              
             }>
             </Route>
             <Route exact path="/item/:id" element={<ItemPage />}></Route>
